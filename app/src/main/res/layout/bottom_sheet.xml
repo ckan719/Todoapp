@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              app:behavior_hideable="false"
+              android:background="@drawable/background"
+              android:id="@+id/bottom_sheet"
+              app:behavior_peekHeight="40dp"
+              app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+              android:layout_height="400dp">
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="match_parent">
+        <TextView android:layout_width="match_parent"
+                  android:text="Đã Hoàn Thành"
+                  android:background="#DEF6FF"
+                  android:padding="10dp"
+                  android:gravity="center"
+                  android:textColor="#000000"
+                  android:id="@+id/titleFinish"
+                  android:layout_height="wrap_content"/>
+        <ListView android:layout_width="match_parent"
+                  android:id="@+id/finistList"
+                  android:divider="@android:color/transparent"
+                  android:dividerHeight="2.0sp"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                  android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

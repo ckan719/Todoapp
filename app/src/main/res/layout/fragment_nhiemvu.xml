@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ListView android:layout_width="match_parent"
+                  android:paddingTop="10dp"
+                  android:id="@+id/listViewMission"
+                  android:clickable="true"
+                  android:divider="@android:color/transparent"
+                  android:dividerHeight="5.0sp"
+                  android:paddingLeft="5dp"
+                  android:paddingRight="5dp"
+                  android:layout_height="705dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/btAdd"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/evolbutton"
+                android:textColor="#FFFFFF"
+                android:textSize="35dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="+"/>
+    </LinearLayout>
+    <include layout="@layout/bottom_sheet"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_gravity="bottom"
+                  android:id="@+id/formIPMission"
+                  android:visibility="gone"
+                  android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/top_evol"
+                android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:padding="5dp"
+                          android:layout_height="wrap_content">
+                <EditText android:layout_width="match_parent"
+                          android:gravity="center"
+                          android:id="@+id/edtIPMission"
+                          android:textColor="#000000"
+                          android:hint="Chạm 'Hoàn tất' để thêm nhiệm vụ "
+                          android:background="@drawable/none_boder"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <GridLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                <Button android:text=" Đặt nhắc nhở"
+                        android:background="@drawable/evol_bt_gray"
+                        android:drawableLeft="@drawable/stopwatch"
+                        android:textSize="10sp"
+                        android:id="@+id/btTime"
+                        android:padding="5dp"
+                        android:layout_height="25dp"
+                />
+                <TextView android:text="Hoàn tất"
+                          android:padding="5dp"
+                          android:textColor="#000000"
+                          android:enabled="false"
+                          android:id="@+id/btAddMission"
+                          android:layout_marginRight="10dp"
+                          android:layout_column="2"/>
+            </GridLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

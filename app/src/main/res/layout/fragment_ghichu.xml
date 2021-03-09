@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ListView android:layout_width="match_parent"
+                  android:id="@+id/listView"
+                  android:divider="@android:color/transparent"
+                  android:dividerHeight="10.0sp"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:paddingLeft="7dp"
+                  android:paddingRight="7dp"
+                  android:paddingBottom="10dp"
+
+        />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:background="#EEC6FBFA"
+                android:layout_gravity="bottom"
+                android:id="@+id/menuBottom"
+                app:menu="@menu/menu"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/btAdd"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/evolbutton"
+                android:textColor="#FFFFFF"
+                android:textSize="35dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="+"/>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg3">
+    <TextView android:layout_width="match_parent"
+              android:text="Thêm sự kiện"
+              android:gravity="center"
+              android:textSize="35dp"
+              android:layout_marginBottom="40dp"
+              android:textColor="#006BEE"
+              android:layout_height="wrap_content"/>
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/edtTitle"
+              android:padding="10dp"
+              android:background="@drawable/none_boder"
+              android:hint="Nhập tiêu đề sự kiện"
+              android:layout_marginBottom="20px"
+              android:layout_height="wrap_content"/>
+    <GridLayout android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+        <TextView android:layout_width="100dp"
+                  android:text="Ngày :"
+
+                  android:textSize="20sp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="120dp"
+                  android:text="DD/MM/YY"
+                  android:id="@+id/tvDate"
+                  android:layout_height="wrap_content"/>
+
+        <ImageButton android:layout_width="wrap_content"
+                     android:id="@+id/btDate"
+                     android:layout_column="2"
+                     android:layout_gravity="right"
+                     android:background="@drawable/calender"
+                     android:layout_height="wrap_content"
+                     android:onClick="doBtDate"/>
+
+    </GridLayout>
+    <GridLayout android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+        <TextView android:layout_width="100dp"
+                  android:text="Thời gian :"
+                  android:textSize="20dp"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="120dp"
+                  android:text="HH:PP"
+                  android:id="@+id/tvTime"
+                  android:layout_height="wrap_content"/>
+
+        <ImageButton android:layout_width="wrap_content"
+                     android:id="@+id/btTime"
+                     android:layout_column="2"
+                     android:layout_gravity="right"
+                     android:background="@drawable/stopwatch"
+                     android:layout_height="wrap_content"
+                     android:onClick="doBtTime"/>
+    </GridLayout>
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/edtVal"
+              android:hint="Nội dung"
+              android:padding="10dp"
+              android:background="@drawable/none_boder"
+              android:inputType="textMultiLine"
+              android:layout_marginBottom="30dp"
+              android:layout_height="wrap_content"/>
+    <Button android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:text="Thêm"
+            android:onClick="doBtThem"
+            android:background="@drawable/evolbutton1"
+            android:layout_height="50dp"/>
+</LinearLayout>
